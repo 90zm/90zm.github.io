@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网站受到攻击</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #e74c3c;
+        text-align: center;
+    }
+    p {
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .top10-table {
+        margin-top: 30px;
+    }
+    .top10-table th:first-child {
+        width: 50px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>网站受到攻击</h1>
+    <p>中午电话打来，又拍云欠费。昨天晚上开始的，直接干欠费240元。</p>
+    <h2>部分请求内容</h2>
+    <pre>
+124.205.84.131 - - [05/Mar/2024:23:00:02 +0800] "GET https://90zm.net/search/rf/?241901278091 HTTP/1.1" 403 45 "https://www.google.am/search?q=90zm.net/search/rf/" "Mozilla/5.0 (Linux i686; rv:67.0) Gecko/20210320 Firefox/67.0" "application/json" 0 Miss "-" Static "-" 0.004 222.211.73.19
+124.205.84.131 - - [05/Mar/2024:23:00:02 +0800] "GET https://90zm.net/search/rf/?175426567148 HTTP/1.1" 403 45 "https://www.google.am/search?q=90zm.net/search/rf/" "Mozilla/5.0 (Linux i686; rv:67.0) Gecko/20210320 Firefox/67.0" "application/json" 0 Miss "-" Static "-" 0.000 222.211.73.19
+124.205.84.131 - - [05/Mar/2024:23:00:02 +0800] "GET https://90zm.net/search/rf/?104961840660 HTTP/1.1" 403 45 "https://www.google.am/search?q=90zm.net/search/rf/" "Mozilla/5.0 (Linux i686; rv:67.0) Gecko/20210320 Firefox/67.0" "application/json" 0 Miss "-" Static "-" 0.000 222.211.73.19
+124.205.84.131 - - [05/Mar/2024:23:00:02 +0800] "GET https://90zm.net/search/rf/?56817429178 HTTP/1.1" 403 45 "https://www.google.am/search?q=90zm.net/search/rf/" "Mozilla/5.0 (Linux i686; rv:67.0) Gecko/20210320 Firefox/67.0" "application/json" 0 Miss "-" Static "-" 0.000 222.211.73.19
+    </pre>
+    <p>我以为屏蔽国外IP的访问就行了，没想到请求次数也是付费内容。</p>
+    <h2>热门页面top10</h2>
+    <table class="top10-table">
+        <tr>
+            <th>#</th>
+            <th>引用页面</th>
+            <th>操作</th>
+            <th>次数</th>
+            <th>流量</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>https://steamcommunity.com/market/search?q=90zm.net/search/rf/</td>
+            <td></td>
+            <td>2547525</td>
+            <td>189.706 MB</td>
+        </tr>
+        <!-- 添加其他行 -->
+    </table>
+    <h2>产生的主要费用</h2>
+    <table>
+        <tr>
+            <th>HTTPS 加速 - 欧美</th>
+            <th>日请求次数</th>
+            <th>34099745 次</th>
+            <th>238.700 元</th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>计费项</th>
+            <th>国内（元/万次）</th>
+            <th>亚太（元/万次）</th>
+            <th>欧美（元/万次）</th>
+        </tr>
+        <tr>
+            <td>绑定域名个数</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>HTTPS 请求</td>
+            <td>0.05</td>
+            <td>0.15</td>
+            <td>0.07</td>
+        </tr>
+    </table>
+    <p>0.07*3409=238.63</p>
+    <p>当时选的好像是全球加速，应该不适用全球加速的，可恶！吃一堑长一智吧！</p>
+    <p>技术层面还没有办法解决，限制了请求流量，没办法限制请求次数！</p>
+</div>
+</body>
+</html>
